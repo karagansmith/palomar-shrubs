@@ -1,6 +1,6 @@
 #evergreen cover data 
 library(readr)
-evergreen_cover <- read_csv("Desktop/Palamar/NDVI/evergreen_cover2020-2024.csv")
+evergreen_cover <- read_csv("https://raw.githubusercontent.com/karagansmith/palomar-shrubs/main/NDVI/evergreen_cover2020-2024.csv")
 evergreen_cover
 
 #change plot to be capital P 
@@ -8,7 +8,7 @@ evergreen_cover
 colnames(evergreen_cover)[colnames(evergreen_cover) == "plot"] <- "Plot"
 
 #treatment data 
-treatments <- read_csv("/Users/karagansmith/Desktop/Palamar/Treatments Files/treatments_invasion.csv", col_names = TRUE)
+treatments <- read_csv("https://raw.githubusercontent.com/karagansmith/palomar-shrubs/main/Treatments%20Files/treatments_invasion.csv", col_names = TRUE)
 
 #merge the data 
 evergreendf=merge(treatments, evergreen_cover, by='Plot')
