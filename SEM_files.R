@@ -1,7 +1,7 @@
 
 #bring in data 
 library(readr)
-sem_data <- read_csv("Desktop/Palamar/Shrub Recovery/sem_data.csv")
+sem_data <- read_csv(""https://raw.githubusercontent.com/karagansmith/palomar-shrubs/main/Palamar/Shrub Recovery/sem_data.csv")
 
 #make a summary stats table 
 
