@@ -1,7 +1,7 @@
 
 #bring in data 
 library(readr)
-sem_data <- read_csv(""https://raw.githubusercontent.com/karagansmith/palomar-shrubs/main/Palamar/Shrub Recovery/sem_data.csv")
+sem_data <- read_csv("Desktop/Palamar/Shrub Recovery/sem_data.csv")
 
 #make a summary stats table 
 
@@ -136,6 +136,9 @@ model_non_saturated <- '
   log_invasive_cover ~ a*fire_severity
   n_seedlings_total ~ b*log_invasive_cover + c*fire_severity
   survival2022 ~ d*log_invasive_cover + e*fire_severity
+
+  # Fix variance of exogenous predictor
+  fire_severity ~~ 1*fire_severity
 
   # Indirect effects
   indirect_seedlings := a*b
